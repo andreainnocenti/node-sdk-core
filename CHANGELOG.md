@@ -1,3 +1,59 @@
+# [5.4.0](https://github.com/IBM/node-sdk-core/compare/v5.3.2...v5.4.0) (2025-05-30)
+
+
+### Features
+
+* **auth:** add support for MCSP V2 authentication ([69b644b](https://github.com/IBM/node-sdk-core/commit/69b644b1e81896b2b29dfcdd4f8117802918e50b))
+
+## [5.3.2](https://github.com/IBM/node-sdk-core/compare/v5.3.1...v5.3.2) (2025-03-10)
+
+
+### Bug Fixes
+
+* downgrade node types to align with minimum supported node version ([#301](https://github.com/IBM/node-sdk-core/issues/301)) ([519d516](https://github.com/IBM/node-sdk-core/commit/519d5166b1ef3c61d7d30fb7ab3c3598b77c7d2d))
+
+## [5.3.1](https://github.com/IBM/node-sdk-core/compare/v5.3.0...v5.3.1) (2025-03-10)
+
+
+### Bug Fixes
+
+* **deps:** upgrade axios to 1.8.2 ([#300](https://github.com/IBM/node-sdk-core/issues/300)) ([d34a1d1](https://github.com/IBM/node-sdk-core/commit/d34a1d10603e09d744ecd40719d45cffdda65e3d))
+
+# [5.3.0](https://github.com/IBM/node-sdk-core/compare/v5.2.0...v5.3.0) (2025-03-07)
+
+
+### Features
+
+* **ContainerAuthenticator:** add support for code engine workload ([#296](https://github.com/IBM/node-sdk-core/issues/296)) ([f8e2b43](https://github.com/IBM/node-sdk-core/commit/f8e2b43632d32ae809dc71a4e0d9b76fed535bac))
+
+# [5.2.0](https://github.com/IBM/node-sdk-core/compare/v5.1.4...v5.2.0) (2025-03-06)
+
+
+### Features
+
+* add support for accepting axios options in sendRequest ([#299](https://github.com/IBM/node-sdk-core/issues/299)) ([ddd81aa](https://github.com/IBM/node-sdk-core/commit/ddd81aab3103151e387737aff4c83da60b291efc))
+
+## [5.1.4](https://github.com/IBM/node-sdk-core/compare/v5.1.3...v5.1.4) (2025-03-05)
+
+
+### Bug Fixes
+
+* update node types to align with required node versions ([#298](https://github.com/IBM/node-sdk-core/issues/298)) ([c4d67d7](https://github.com/IBM/node-sdk-core/commit/c4d67d73d5d1767b78af36d2a2ab7584cc5aa4a0))
+
+## [5.1.3](https://github.com/IBM/node-sdk-core/compare/v5.1.2...v5.1.3) (2025-02-17)
+
+
+### Bug Fixes
+
+* **build:** fix .releaserc format ([be52706](https://github.com/IBM/node-sdk-core/commit/be52706e9ee9ed62b9227cd0dce33e2e57b705ca)), closes [arf/planning-sdk-squad#4105](https://github.com/arf/planning-sdk-squad/issues/4105)
+
+## [5.1.2](https://github.com/IBM/node-sdk-core/compare/v5.1.1...v5.1.2) (2025-01-29)
+
+
+### Bug Fixes
+
+* **deps:** update axios to resolve vulnerability ([#292](https://github.com/IBM/node-sdk-core/issues/292)) ([9838134](https://github.com/IBM/node-sdk-core/commit/9838134e111de00a686155dd64b7a91680093ef1))
+
 ## [5.1.1](https://github.com/IBM/node-sdk-core/compare/v5.1.0...v5.1.1) (2025-01-10)
 
 

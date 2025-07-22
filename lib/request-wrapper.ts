@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 
 /**
- * (C) Copyright IBM Corp. 2014, 2024.
+ * (C) Copyright IBM Corp. 2014, 2025.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -156,11 +156,15 @@ export class RequestWrapper {
    * @returns the string representation of the request
    */
   private formatAxiosRequest(request: InternalAxiosRequestConfig): string {
-    const { method, url, data, headers } = request;
-
+    const { method, url, data, headers, params } = request;
+    let queryString = stringify(params);
+    if (queryString) {
+      queryString = `?${queryString}`;
+    }
     const headersOutput = this.formatAxiosHeaders(headers);
     const body = this.formatAxiosBody(data);
-    const output = `${(method || '??').toUpperCase()} ${url || '??'}\n${headersOutput}\n${body}`;
+    const urlStr = url ? url + queryString : '??';
+    const output = `${(method || '??').toUpperCase()} ${urlStr}\n${headersOutput}\n${body}`;
     return redactSecrets(output);
   }
 
@@ -245,7 +249,7 @@ export class RequestWrapper {
    */
   public async sendRequest(parameters): Promise<any> {
     const options = extend(true, {}, parameters.defaultOptions, parameters.options);
-    const { path, body, form, formData, qs, method, serviceUrl } = options;
+    const { path, body, form, formData, qs, method, serviceUrl, axiosOptions } = options;
     let { headers, url } = options;
 
     const multipartForm = new FormData();
@@ -329,6 +333,7 @@ export class RequestWrapper {
       raxConfig: this.raxConfig,
       responseType: options.responseType || 'json',
       paramsSerializer: { serialize: (params) => stringify(params) },
+      ...axiosOptions,
     };
 
     return this.axiosInstance(requestParams).then(
